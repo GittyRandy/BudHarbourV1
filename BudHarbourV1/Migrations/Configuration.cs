@@ -18,8 +18,8 @@
         {
             var apparels = new List<Apparel>
             {
-                new Apparel{ApparelID=1,Name="Bud Harbour Shirt",Price=500,Size="M",Description="Black and white shirt with Bud Harbour logo"},
-                new Apparel{ApparelID=2,Name="Bud Harbour Hoodie",Price=800,Size="M",Description="Black and white hoodie with Bud Harbour logo"}
+                new Apparel{ApparelID=1,Name="Bud Harbour Shirt",Price=500,Stock=5,Size="M",Description="Black and white shirt with Bud Harbour logo"},
+                new Apparel{ApparelID=2,Name="Bud Harbour Hoodie",Price=800,Stock=3,Size="M",Description="Black and white hoodie with Bud Harbour logo"}
             };
             apparels.ForEach(s => context.Apparels.AddOrUpdate(p => p.Name, s));
             context.SaveChanges();

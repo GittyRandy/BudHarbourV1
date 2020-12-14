@@ -133,13 +133,16 @@
     <Compile Include="Controllers\HydroController.cs" />
     <Compile Include="Controllers\SmokeController.cs" />
     <Compile Include="DAL\BudContext.cs" />
-    <Compile Include="DAL\BudInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202012140859054_InitialCreate.cs" />
     <Compile Include="Migrations\202012140859054_InitialCreate.designer.cs">
       <DependentUpon>202012140859054_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012141052111_ApparelStock.cs" />
+    <Compile Include="Migrations\202012141052111_ApparelStock.designer.cs">
+      <DependentUpon>202012141052111_ApparelStock.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Apparel.cs" />
@@ -226,6 +229,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202012140859054_InitialCreate.resx">
       <DependentUpon>202012140859054_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012141052111_ApparelStock.resx">
+      <DependentUpon>202012141052111_ApparelStock.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -21,6 +21,9 @@
             @Html.DisplayNameFor(model => model.Size)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Stock)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Description)
         </th>
         <th></th>
@@ -38,12 +41,15 @@
             @Html.DisplayFor(modelItem => item.Size)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.Stock)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ApparelID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ApparelID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ApparelID })
+            @Html.ActionLink("Edit", "Edit", new { id = item.ApparelID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ApparelID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ApparelID })
         </td>
     </tr>
 }
