@@ -47,6 +47,42 @@
             };
             smokes.ForEach(s => context.Smokes.AddOrUpdate(p => p.Name, s));
             context.SaveChanges();
+
+            var customers = new List<Customer>
+            {
+                new Customer{CustomerID=1,FirstName="Randall", Surname="Li"},
+                new Customer{CustomerID=2,FirstName="William", Surname="Wu"}
+            };
+            customers.ForEach(s => context.Customers.AddOrUpdate(p => p.FirstName, s));
+            context.SaveChanges();
+
+            var sales = new List<Sale>
+            {
+                new Sale{SaleID=1, ApparelID = apparels.Single(a => a.Name == "Bud Harbour Shirt").ApparelID,
+                        BakeID = bakes.Single(b => b.Name == "Chocolate Brownie").BakeID,
+                        HydroID = hydros.Single(h => h.Name == "Lights").HydroID,
+                        SmokeID = smokes.Single(s => s.Name == "Bong").SmokeID,
+                        CustomerID = customers.Single(c => c.Surname == "Li").CustomerID,
+                        Quantity = 3, Total = 300 },
+                new Sale{SaleID=2, ApparelID = apparels.Single(a => a.Name == "Bud Harbour Hoodie").ApparelID,
+                        BakeID = bakes.Single(b => b.Name == "Vanilla Cookie").BakeID,
+                        HydroID = hydros.Single(h => h.Name == "Seeds").HydroID,
+                        SmokeID = smokes.Single(s => s.Name == "Rolling paper").SmokeID,
+                        CustomerID = customers.Single(c => c.Surname == "Wu").CustomerID,
+                        Quantity = 3, Total = 300 },
+            };
+            foreach (Sale s in sales)
+            {
+                var SaleInDataBase = context.Sales.Where(
+                a =>
+                a.Apparel.ApparelID == s.ApparelID &&
+                a.Bake.BakeID == s.BakeID).SingleOrDefault();
+                if (SaleInDataBase == null)
+                {
+                    context.Sales.Add(s);
+                }
+            }
+            context.SaveChanges();
         }
     }
 }

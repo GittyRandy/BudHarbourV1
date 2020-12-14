@@ -1,0 +1,58 @@
+﻿@model BudHarbourV1.Models.Sale
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Sale</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Apparel.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apparel.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bake.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bake.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hydro.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hydro.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Smoke.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Smoke.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SaleID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

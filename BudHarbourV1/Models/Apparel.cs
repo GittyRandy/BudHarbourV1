@@ -14,5 +14,7 @@ namespace BudHarbourV1.Models
 
         public string Size { get; set; }
         public string Description { get; set; }
+
+        public virtual ICollection<Sale> Sales { get; set; }
     }
 }

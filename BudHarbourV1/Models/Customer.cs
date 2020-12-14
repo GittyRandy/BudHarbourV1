@@ -5,12 +5,11 @@ using System.Web;
 
 namespace BudHarbourV1.Models
 {
-    public class Bake
+    public class Customer
     {
-        public int BakeID { get; set; }
-        public string Name { get; set; }
-        public double Price { get; set; }
-        public string Description { get; set; }
+        public int CustomerID { get; set; }
+        public string FirstName { get; set; }
+        public string Surname { get; set; }
         public virtual ICollection<Sale> Sales { get; set; }
     }
 }

@@ -129,8 +129,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ApparelController.cs" />
     <Compile Include="Controllers\BakeController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HydroController.cs" />
+    <Compile Include="Controllers\SaleController.cs" />
     <Compile Include="Controllers\SmokeController.cs" />
     <Compile Include="DAL\BudContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -144,10 +146,16 @@
     <Compile Include="Migrations\202012141052111_ApparelStock.designer.cs">
       <DependentUpon>202012141052111_ApparelStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012141407139_CustomerAndSales.cs" />
+    <Compile Include="Migrations\202012141407139_CustomerAndSales.designer.cs">
+      <DependentUpon>202012141407139_CustomerAndSales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Apparel.cs" />
     <Compile Include="Models\Bake.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Hydro.cs" />
+    <Compile Include="Models\Sale.cs" />
     <Compile Include="Models\Smoke.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -209,6 +217,16 @@
     <Content Include="Views\Smoke\Details.cshtml" />
     <Content Include="Views\Smoke\Edit.cshtml" />
     <Content Include="Views\Smoke\Index.cshtml" />
+    <Content Include="Views\Customer\Create.cshtml" />
+    <Content Include="Views\Customer\Delete.cshtml" />
+    <Content Include="Views\Customer\Details.cshtml" />
+    <Content Include="Views\Customer\Edit.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Sale\Create.cshtml" />
+    <Content Include="Views\Sale\Delete.cshtml" />
+    <Content Include="Views\Sale\Details.cshtml" />
+    <Content Include="Views\Sale\Edit.cshtml" />
+    <Content Include="Views\Sale\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -232,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012141052111_ApparelStock.resx">
       <DependentUpon>202012141052111_ApparelStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012141407139_CustomerAndSales.resx">
+      <DependentUpon>202012141407139_CustomerAndSales.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
